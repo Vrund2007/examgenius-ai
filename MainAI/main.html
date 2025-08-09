@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI JEE/NEET Paper Generator</title>
+    <link rel="stylesheet" href="mainstyles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+
+  <body>
+     <div class="background-animation">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <div class="container">
+      <header>
+        <div class="header-left">
+          <div class="logo">
+            <i class="fas fa-brain"></i>
+            <span>Exam</span>Genius
+          </div>
+          <div class="paper-btn-container">
+            <button class="papers-btn" id="your-papers-btn">
+              <i class="fas fa-file-alt"></i> Your Papers
+            </button>
+          </div>
+        </div>
+        <div class="signout-btn-container">
+          <button class="signout-btn" onclick="signOut()">
+            <i class="fas fa-sign-out-alt"></i> Sign Out
+          </button>
+        </div>
+        <h1>JEE/NEET <span>Paper Generator</span></h1>
+        <p class="subtitle">
+          Create exam papers with AI-powered questions
+        </p>
+        <div class="decoration-line"></div>
+      </header>
+
+      <main>
+        <div class="exam-options">
+          <div class="option-card" id="jee-option">
+            <div class="card-icon">
+              <i class="fas fa-atom"></i>
+            </div>
+            <h2>JEE Mains</h2>
+            <div class="card-details">
+              <p><i class="fas fa-book"></i> Physics, Chemistry, Math</p>
+            </div>
+            <button class="generate-btn">
+              <span>Generate Paper</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <div class="card-corner"></div>
+          </div>
+
+          <div class="option-card" id="neet-option">
+            <div class="card-icon">
+              <i class="fas fa-dna"></i>
+            </div>
+            <h2>NEET</h2>
+            <div class="card-details">
+              <p><i class="fas fa-book"></i> Physics, Chemistry, Biology</p>
+            </div>
+            <button class="generate-btn">
+              <span>Generate Paper</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <div class="card-corner"></div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-logo">
+            <i class="fas fa-brain"></i>
+            <span>Exam</span>Genius
+          </div>
+          <div class="footer-links">
+            <a href="https://github.com/Vrund2007" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/vrund-jotania-053460334/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:vrundjotania20@gmail.com" target="_blank">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <p class="copyright">
+          Check out the source code on github and contribute to the project!
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      window.jsPDF = window.jspdf.jsPDF;
+      const firebaseConfig = {
+        apiKey: "AIzaSyBQj1fYD1VAajmJw3dyeIYQKto2ICacQyg",
+        authDomain: "examgeniusai.firebaseapp.com",
+        projectId: "examgeniusai",
+        storageBucket: "examgeniusai.appspot.com",
+        messagingSenderId: "279001284411",
+        appId: "1:279001284411:web:072ea36c7e859fcff2011e",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://unpkg.com/cloudinary-core@2.11.4/cloudinary-core-shrinkwrap.min.js"></script>
+    <script src="mainscript.js"></script>
+  </body>
+</html>

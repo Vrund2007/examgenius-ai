@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ExamGenius | AI-Powered JEE/NEET Paper Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <i class="fas fa-brain"></i>
+          Exam<span>Genius</span>
+        </div>
+        <nav class="navigation">
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#benefits">Benefits</a>
+          <a href="Login/login.html" class="btn btn-outline" target="_blank"
+            >Login</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>AI-Generated <span>Exam Papers</span> That Feel Real</h1>
+          <p class="subtitle">
+            Generate JEE/NEET practice papers with answer keys
+          </p>
+        </div>
+        <div class="hero-image">
+          <div class="card">
+            <div class="card-header">
+              <span>Both JEE/NEET pattern papers</span>
+            </div>
+            <div class="card-content">
+              <div class="stats">
+                <div class="stat-item">
+                  <div class="stat-value">Unlimited Questions</div>
+                </div>
+              </div>
+              <div class="subject-distribution">
+                <div class="subject">
+                  <span>Physics</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="subject">
+                  <span>Chemistry</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div>
+                  </div>
+                </div>
+                <div class="subject">
+                  <span>Mathematics/Biology</span>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="features" class="features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Key <span>Features</span></h2>
+          <p class="section-subtitle">
+            Some of key features
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-dna"></i>
+            </div>
+            <h3>PYQ Pattern Matching</h3>
+            <p>
+              Questions follow the approximate structure and style of previous
+              year questions, including:
+            </p>
+            <ul>
+              <li>Identical sentence patterns</li>
+              <li>Same terminology and units</li>
+            </ul>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-file-alt"></i>
+              
+            </div>
+            <h3>View Papers</h3>
+            <p>Easily revisit your past downloaded papers:</p>
+            <ul>
+              <li>Access previously generated question papers</li>
+              <li>Organized by date and subject</li>
+              <li>Quickly re-download or review</li>
+            </ul>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-file-pdf"></i>
+            </div>
+            <h3>Authentic PDF Output</h3>
+            <p>Papers that look identical to real exams:</p>
+            <ul>
+              <li>Official fonts and layout</li>
+              <li>Same instructions</li>
+              <li>Specimen watermarks</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2>How It <span>Works</span></h2>
+          <p class="section-subtitle">
+            Get your customized exam paper in three simple steps
+          </p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>Select Exam</h3>
+            <p>Choose between JEE or NEET patterns</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>AI Generates Paper</h3>
+            <p>Our system creates a brand new exam</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>Download & Practice</h3>
+            <p>Get your PDF and start preparing</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="benefits" class="benefits">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose <span>ExamGenius</span></h2>
+          <p class="section-subtitle">
+            The advantages of practicing with our AI-generated papers
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div style="display: flex; align-items: center; gap: 10px">
+              <i class="fas fa-infinity" style="font-size: 1.5em"></i>
+              <h3 style="margin: 0">Unlimited Variations</h3>
+            </div>
+            <p style="margin-top: 10px">
+              Generate new papers anytime - never run out of authentic practice
+              material
+            </p>
+          </div>
+
+          <div class="benefit-card">
+            <div style="display: flex; align-items: center; gap: 10px">
+              <i class="fas fa-stopwatch" style="font-size: 1.5em"></i>
+              <h3 style="margin: 0">Time-Saving</h3>
+            </div>
+            <p style="margin-top: 10px">
+              Get exam-ready papers in seconds, no more searching for quality
+              questions
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <div class="logo">
+              <i class="fas fa-brain"></i>
+              <span>ExamGenius</span>
+            </div>
+            <p>Created by Vrund Jotania</p>
+          </div>
+          <div class="footer-links">
+            <div
+              class="link-group"
+              style="display: flex; flex-direction: row; gap: 15px"
+            >
+            <a href="https://www.linkedin.com/in/vrund-jotania-053460334/" target="_blank">About Me</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Made for fun!!</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    /* Blue Color Palette */
+    --primary-bg: #0a192f;
+    --secondary-bg: #172a45;
+    --accent: #2563eb;
+    --accent-dark: #3d85cc;
+    --text-primary: #dce0e3;
+    --text-secondary: #2563eb;
+    --card-shadow: rgba(2, 12, 27, 0.7);
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(180deg, #0f172a 50%, #112240 100%);
+    --card-gradient: linear-gradient(145deg, #172a45 0%, #0e1a2e 100%);
+
+    /* Animations */
+    --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--gradient-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Background Animation */
+.background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--accent);
+}
+
+.logo i {
+    margin-right: 0.5rem;
+    font-size: 2rem;
+}
+
+.logo span {
+    color: var(--text-primary);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: #2563eb;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+}
+
+h1 span {
+    color: #f8fafc;
+    display: block;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #f8fafc;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.decoration-line {
+    height: 4px;
+    width: 100px;
+    background: var(--accent);
+    margin: 1.5rem auto;
+    border-radius: 2px;
+    position: relative;
+}
+
+.decoration-line::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+/* Sort Options */
+.sort-options {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1rem;
+}
+
+.sort-select {
+    background: var(--secondary-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.sort-select:hover {
+    border-color: var(--accent-dark);
+}
+
+/* Papers Container */
+.papers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.paper-card {
+    background: var(--card-gradient);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    border: 1px solid rgba(77, 166, 255, 0.1);
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.paper-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(2, 12, 27, 0.8);
+    border-color: var(--accent);
+}
+
+.paper-icon {
+    font-size: 2.5rem;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+.paper-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.paper-date {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
+
+/* Sign Out Button */
+.signout-btn-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.signout-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.signout-btn i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.signout-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h1 span {
+        font-size: 1.8rem;
+    }
+
+    .papers-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h1 span {
+        font-size: 1.5rem;
+    }
+
+    .papers-container {
+        grid-template-columns: 1fr;
+    }
+}

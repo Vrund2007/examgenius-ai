@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Papers</title>
+    <link rel="stylesheet" href="view-paperstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="background-animation"></div>
+    <div class="container">
+      <header>
+        <div class="signout-btn-container">
+          <button class="signout-btn" onclick="signOut()">
+            <i class="fas fa-sign-out-alt"></i> Sign Out
+          </button>
+        </div>
+        <div class="logo">
+          <i class="fas fa-file-pdf"></i>
+          <span>ExamGenius Pdf Viewer</span>
+        </div>
+        <h1>Your <span>Papers</span></h1>
+        <div class="decoration-line"></div>
+        <p class="subtitle">All your generated PDFs in one place</p>
+      </header>
+
+      <div class="sort-options">
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select" class="sort-select">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
+      </div>
+
+      <div class="papers-container" id="papers-container">
+        
+      </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBQj1fYD1VAajmJw3dyeIYQKto2ICacQyg",
+        authDomain: "examgeniusai.firebaseapp.com",
+        projectId: "examgeniusai",
+        storageBucket: "examgeniusai.appspot.com",
+        messagingSenderId: "279001284411",
+        appId: "1:279001284411:web:072ea36c7e859fcff2011e",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="view-paperscript.js"></script>
+  </body>
+</html>
